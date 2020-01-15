@@ -61,7 +61,7 @@ function makePersonObject(id, name, email) {
  * the returned value should look like `Hello, my name is Leia`.
 */
 function getName(person) {
-  return 'Hello, my name is {person.name}'.replace('{person.name}', person.name);
+  return `Hello, my name is ${person.name}`;
 }
 
 /**
@@ -81,7 +81,7 @@ function makeSmartPerson(name) {
   return {
     name: name,
     sum: (a, b) => a + b,
-    speak: () => 'Hello, my name is {name}'.replace('{name}', name),
+    speak: () => `Hello, my name is ${name}`,
   }
 }
 
@@ -140,7 +140,8 @@ function get3rdCar(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoByIndex(inventory, index) {
-  /* code here */
+  const theCar = inventory[index];
+  return `This is a ${theCar.car_make} ${theCar.car_model}`;
 }
 
 /**
